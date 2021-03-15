@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ideapoke.example.model.Company;
 import com.ideapoke.example.service.CompanyService;
@@ -23,11 +24,13 @@ public class CompanyController {
 	}
 	
 	@GetMapping("/list")
+	@ResponseBody
 	public List<Company> listAll() {
 		return service.listAll();
 	}
 	
 	@GetMapping("/list/{keyword}")
+	@ResponseBody
 	public List<Company> getList(@PathVariable String keyword) {
 		return service.listUsingKeyword(keyword);
 	}
