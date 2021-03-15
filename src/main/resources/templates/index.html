@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ideapoke</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--  <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<link rel="stylesheet" th:href="@{css/animate.css}"/>
+<link rel="stylesheet"  th:href="@{css/ekko-lightbox.css}"/>
+<link rel="stylesheet" href="css/main.css">
+<style>
+input, select, textarea {
+	color: #2c5cab;
+	padding-left: 30px;
+}
+
+textarea:focus, input:focus {
+	color: #2c5cab;
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #2c5cab;
+	margin-left: 10px;
+	opacity: 1;
+	/* Firefox */
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #2c5cab;
+	margin-left: 10px;
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: #2c5cab;
+	margin-left: 10px;
+}
+</style>
+</head>
+<body>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".slidingDiv89").hide();
+			$(".show_hide89").show();
+			$('.show_hide89').click(function() {
+				$(".slidingDiv89").slideToggle();
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$('.pagination-inner a').on('click', function() {
+			$(this).siblings().removeClass('pagination-active');
+			$(this).addClass('pagination-active');
+		})
+	</script>
+</body>
+</html>
